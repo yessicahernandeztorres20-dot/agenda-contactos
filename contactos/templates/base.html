@@ -2,15 +2,33 @@
 <html>
 <head>
     <title>Agenda de Contactos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
 </head>
 <body>
-    <nav>
-        <a href="{% url 'lista_contactos' %}">Inicio</a>
-        <a href="{% url 'crear_contacto' %}">Agregar Contacto</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'lista_contactos' %}">Agenda de Contactos</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="{% url 'lista_contactos' %}">Inicio</a>
+                <a class="nav-link" href="{% url 'crear_contacto' %}">Agregar Contacto</a>
+            </div>
+        </div>
     </nav>
-    <main>
+
+    <div class="container mt-4">
         {% block content %}
         {% endblock %}
-    </main>
+    </div>
+
+    <footer class="mt-4">
+        <p>&copy; 2025 - Agenda de Contactos</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
