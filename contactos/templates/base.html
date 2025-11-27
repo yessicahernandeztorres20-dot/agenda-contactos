@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agenda de Contactos</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'lista_contactos' %}">Inicio</a>
+        <a href="{% url 'crear_contacto' %}">Agregar Contacto</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
